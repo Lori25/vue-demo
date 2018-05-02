@@ -20,7 +20,11 @@
 <body>
   <div id="app">
     <p>{{ message }}</p>
-    <p>{{ desc }}，<a v-bind:href="url">建站过程记录</a></p>
+    <p>{{ desc }}，<a target="_blank" v-bind:href="url">建站过程记录</a></p>
+
+    <div>
+      <p>{{gitMsg.desc}}，<a target="_blank" :href="gitMsg.url">github 项目与本地项目关联</a></p>
+    </div>
   </div>
 
   <script>
@@ -29,7 +33,11 @@
       data: {
         message: 'Hello Vue!',
         desc: '此站点基于 Nginx + NodeJS (Ubuntu)',
-	      url: 'https://note.youdao.com/share/?id=b802115ca4001995f14f28ea1d5b8f84&type=note#/'
+	      url: 'https://note.youdao.com/share/?id=b802115ca4001995f14f28ea1d5b8f84&type=note#/',
+        gitMsg: {
+          desc: '本项目采用 git 作为代码管理工具',
+          url: 'http://note.youdao.com/noteshare?id=d67123eaa3757b8b1d7ea69d86727fe9'
+        }
       }
     })
   </script>
