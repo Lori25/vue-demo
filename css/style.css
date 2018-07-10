@@ -25,13 +25,15 @@ table tr {
     font-size: 0.8em;
 }
 
-table tr:first-child {
-    font-weight: bold;
-    text-align: center;
-}
 
 table tr:nth-child(odd) {
     background: #eee;
+}
+table tr:first-child {
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background: #66c0c7;
 }
 
 .f-12 {
